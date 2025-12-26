@@ -41,7 +41,7 @@ useEffect(() => {
           <p className={adherence > 80 ? "ok" : "bad"}>
             {adherence}%
           </p>
-          <button onClick={() => setAdherence(adherence - 5)}>
+          <button onClick={() =>setAdherence(prev => Math.max(0, prev - 5))}>
             Simulate Missed Dose
           </button>
         </div>
